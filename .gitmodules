@@ -1,0 +1,3 @@
+[submodule "bag_recorder"]
+	path = bag_recorder
+	url = ./bag_recorder
