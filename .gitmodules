@@ -1,3 +1,6 @@
 [submodule "bag_recorder"]
 	path = bag_recorder
 	url = https://github.com/rosblox/bag_recorder.git
+[submodule "vortex"]
+	path = vortex
+	url = https://gitlab.epfl.ch/create-lab/agricultural-robotics/vortex.git
