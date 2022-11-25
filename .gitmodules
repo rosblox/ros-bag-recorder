@@ -4,3 +4,9 @@
 [submodule "vortex"]
 	path = vortex
 	url = https://gitlab.epfl.ch/create-lab/agricultural-robotics/vortex.git
+[submodule "px4_msgs"]
+	path = px4_msgs
+	url = https://github.com/rosblox/px4_msgs.git
+[submodule "zed-ros2-interfaces"]
+	path = zed-ros2-interfaces
+	url = https://github.com/stereolabs/zed-ros2-interfaces.git
