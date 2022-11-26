@@ -15,15 +15,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /colcon_ws/src
 
-COPY bag_recorder bag_recorder
 COPY vortex/ros-vortex/DynamixelSDK/dynamixel_sdk_custom_interfaces dynamixel_sdk_custom_interfaces
 COPY vortex/ros-vortex/vortex_interfaces vortex_interfaces
 COPY px4_msgs px4_msgs
 COPY zed-ros2-interfaces zed-ros2-interfaces
 
 WORKDIR /colcon_ws
-
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh && colcon build --symlink-install --event-handlers console_direct+
+
+
+WORKDIR /colcon_ws/src
+COPY bag_recorder bag_recorder
+WORKDIR /colcon_ws
+RUN . /opt/ros/${ROS_DISTRO}/setup.sh && colcon build --symlink-install --event-handlers console_direct+
+
 
 WORKDIR /
 
