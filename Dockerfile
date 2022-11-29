@@ -34,5 +34,7 @@ WORKDIR /
 
 COPY ros_entrypoint.sh .
 
+WORKDIR /bags
+
 RUN echo 'alias build="colcon build --symlink-install  --event-handlers console_direct+"' >> ~/.bashrc
 RUN echo 'alias run="ros2 run bag_recorder bag_recorder"' >> ~/.bashrc
