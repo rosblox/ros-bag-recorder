@@ -1,3 +1,0 @@
-[submodule "bag_recorder"]
-	path = bag_recorder
-	url = https://github.com/rosblox/bag_recorder.git
